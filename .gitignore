@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+.vscode/
+*.pem
+*.bak
+.terraform/
+*.log
+*.tfstate
+*.tfstate.backup
