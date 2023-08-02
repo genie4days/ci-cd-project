@@ -7,3 +7,4 @@ package-lock.json
 *.log
 *.tfstate
 *.tfstate.backup
+.terraform.lock.hcl
