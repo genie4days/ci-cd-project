@@ -22,8 +22,7 @@ terraform {
 # Provide the AWS configuration credentials to allow Terraform to connect to AWS:
 provider "aws" {
   region = var.region
-  access_key = "AKIA4AYTPEV6MXMAI7IU"
-  secret_key = "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"
+
 }
 
 
