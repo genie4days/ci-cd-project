@@ -8,8 +8,7 @@ terraform {
         version = "5.10.0"
       }
     }
-token {
-  cli_token = "bOFdczYSJgnXyA.atlasv1.JuDizvzZiU8rVm5XxzJzTCQDXQ6jYkKINt3Mi0EipuOTwqNOTGLyZEcyAxTTWAgVfdI"
+
   cloud {
     organization = "cba-project"
 
@@ -19,7 +18,6 @@ token {
 
     }
   }
-}
 }
 # Provide the AWS configuration credentials to allow Terraform to connect to AWS:
 provider "aws" {
