@@ -8,16 +8,6 @@ terraform {
         version = "5.10.0"
       }
     }
-
-  cloud {
-    organization = "cba-project"
-
-    workspaces {
-      name = "quizapp"
-
-
-    }
-  }
 }
 # Provide the AWS configuration credentials to allow Terraform to connect to AWS:
 provider "aws" {
