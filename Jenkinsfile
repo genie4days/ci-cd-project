@@ -1,14 +1,16 @@
 pipeline {
   agent any
   stages {
-	  steps {
-		  stage('Terraform Login') {
-			  script{
-				  // Get the Terraform token from Jenkins credential.
-				  def token = credentials('terraform-cloud-token')
-				  // Log in to Terraform Cloud.
-				  sh 'terraform login -token $token' 
-		    }
+    stage('Terraform Login') {
+      steps {
+        script {
+          // Get the Terraform token from Jenkins credential.
+          def token = credentials('terraform-cloud-token')
+
+          // Log in to Terraform Cloud.
+          sh 'terraform login -token $token'
+        }
+      }
     }
     stage('Terraform Init') {
       steps {
@@ -22,5 +24,4 @@ pipeline {
       }
     }
   }
-}
 }
