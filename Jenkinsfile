@@ -4,7 +4,7 @@ pipeline {
     stage('Terraform Login') {
       steps {
         // Get the Terraform token from Jenkins credential.
-        def token = credentials('terraform-cloud-token')
+        sh 'terraform login -token $(credentials('terraform-cloud-token'))
 
         // Log in to Terraform Cloud.
         sh 'terraform login -token $token'
