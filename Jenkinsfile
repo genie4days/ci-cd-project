@@ -9,8 +9,8 @@ pipeline {
           def token = credentials('terraform-cloud-token')
 
           // Log in to Terraform Cloud.
-          echo "Terraform login is --> ${login}"
-          sh 'terraform login -login $login'
+          echo "Terraform login is --> ${token}"
+          sh 'terraform login -token $token'
           sh 'terraform login ${token} --auto-approve'
         }
       }
