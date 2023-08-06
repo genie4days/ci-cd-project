@@ -9,7 +9,7 @@ pipeline {
           def token = credentials('terraform-cloud-token')
 
           // Log in to Terraform Cloud.
-         sh 'terraform login -token "' + token + '"'
+         sh 'terraform login -token "' + token + '" -hostname bowstech'
         }
       }
     }
