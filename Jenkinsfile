@@ -5,13 +5,11 @@ pipeline {
       steps {
         script {
           // Get the Terraform token from Jenkins credential.
-          def login = credentials('terraform-cloud-login')
+         
           def token = credentials('terraform-cloud-token')
 
           // Log in to Terraform Cloud.
-          echo "Terraform login is --> ${token}"
-          sh 'terraform login -token $token'
-          sh 'terraform login ${token} --auto-approve'
+         sh 'terraform login -token "' + token + '"'
         }
       }
     }
